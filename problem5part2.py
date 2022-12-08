@@ -23,13 +23,17 @@ with open("inputday5", "r") as file:
             num_crates = int(x[0])
             initial_crate = int(x[1])
             final_crate = int(x[2])
+            poped = []
             for i in range(0, num_crates):
                 x = crates[initial_crate - 1][0]
-                crates[final_crate - 1].insert(0, x)
+                poped.append(x)
                 crates[initial_crate - 1].pop(0)
+            z = len(poped)
+            for j in range(0, num_crates):
+                crates[final_crate - 1].insert(0, poped[z - 1 - j])
+            poped.clear()
 
 for i in range(0, 9):   
     print(crates[i][0], end ="")
 
 print()
-
