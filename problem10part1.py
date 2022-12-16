@@ -4,7 +4,6 @@ signal_strengths = []
 answer = 0  
 current_register_value = 1
 register_values = []
-first_value = 0
 
 with open("InputDay10", "r") as file:
     for line in file:
